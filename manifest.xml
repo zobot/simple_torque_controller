@@ -1,0 +1,31 @@
+<package>
+  <description brief="simple_torque_controller">
+
+     simple_torque_controller
+
+  </description>
+  <author>Zoe McCarthy</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/simple_torque_controller</url>
+  <depend package="pr2_controller_interface"/>
+  <depend package="pr2_mechanism_model"/>
+  <depend package="realtime_tools"/>
+  <depend package="std_msgs"/>
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/>
+  <depend package="pluginlib"/>
+  <depend package="roscpp"/>
+  <depend package="roslib"/>
+  <depend package="tf"/>
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="orocos_kdl"/>
+
+
+  <export>
+    <pr2_controller_interface plugin="${prefix}/controller_plugins.xml" />
+  </export>
+
+</package>
+
+

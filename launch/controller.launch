@@ -1,0 +1,5 @@
+<launch>
+  <rosparam ns="simple_torque_controller">
+    type: simple_torque_controller/SimpleTorqueController
+  </rosparam>
+</launch>

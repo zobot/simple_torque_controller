@@ -1,0 +1,5 @@
+<library path="lib/libsimple_torque_controller_lib">
+  <class name="simple_torque_controller/SimpleTorqueController" 
+         type="simple_torque_controller::SimpleTorqueController"           
+         base_class_type="pr2_controller_interface::Controller" />
+</library>
