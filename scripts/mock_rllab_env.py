@@ -13,6 +13,8 @@ class MockRLLabPR2Env(object):
         rospy.init_node('rllab_torque_publisher')
 
         # kill old controller, load & start new controller
+        rospy.set_param('simple_torque_controller/SimpleTorqueController/type',
+                        'simple_torque_controller/SimpleTorqueController')
         output = check_output("rosrun pr2_controller_manager pr2_controller_manager list", shell=True)
         output_lines = output.split('\n')
         to_kill_l_arm = False
@@ -47,7 +49,6 @@ class MockRLLabPR2Env(object):
 
     def obs_callback(self, msg):
         self.obs_state = np.array(msg.data)
-        print self.obs_state
 
     def get_joint_angles(self):
         return self.obs_state[0:7]
